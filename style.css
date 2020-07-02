@@ -21,7 +21,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 5;
+    z-index: 6;
 }
 
 .menu h1 {
@@ -52,6 +52,7 @@
 .menu-imagen {
     height: 93.2vh;
     background-image: url("./fotos/foto-3.jpg");
+    background-position: center;
     background-size: cover;
 }
 
@@ -65,7 +66,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 93.3%;
+    height: 93.2vh;
     background: rgba(0, 0, 0, 0.3);
     z-index: 0;
 }
@@ -132,6 +133,7 @@
     height: 100%;
     background-image: url("./fotos/foto-1.jpg");
     background-size: cover;
+    background-position: center;
     border-radius: 5px;
 }
 
@@ -228,6 +230,7 @@
     width: 80%;
     background-image: url("./fotos/foto-2.jpg");
     background-size: cover;
+    background-position: center;
     border-radius: 5px;
 }
 
@@ -299,7 +302,7 @@
 .contato {
     width: 100%;
     background: #3d3d3d rgba(0, 0, 0, 0.04);
-    padding: 0 1em 1em 1em;
+    padding: 0 1em 1.1em 1em;
     height: 100%;
     box-shadow: 0px 15px 30px rgb(0, 0, 0, 0.3);
     transform: translateY(5deg);
@@ -309,7 +312,7 @@
 .nome {
     width: 100%;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 1.2em;
     padding: 8px 0;
     margin: 8px 0;
 }
@@ -324,15 +327,19 @@
 
 .contato input,
 .contato textarea {
+    font-size: 1.2em;
     border: none;
     outline: none;
     background: none;
     color: var(--terceira-color);
-    font-size: 18px;
     width: 100%;
     float: left;
-    margin: 0 0.8px;
+    margin: 0 0.2em;
     border-bottom: 1px solid var(--primary-color);
+}
+
+.email {
+    font-size: 1.2em;
 }
 
 .contato textarea {
@@ -343,10 +350,103 @@
 .btn {
     width: 100%;
     background: none;
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     color: var(--terceira-color);
-    padding: 5px;
-    font-size: 18px;
+    padding: 0.3em;
+    font-size: 1.1em;
     cursor: pointer;
-    margin: 12px 0;
+    margin: 0.5em 0;
+}
+
+@media(max-width:768px) {
+    * {
+        overflow-x: hidden;
+    }
+    .caixa-2,
+    .caixa {
+        width: 768px;
+    }
+    .menu {
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .menu li {
+        overflow-y: hidden;
+    }
+    .menu h1 {
+        text-align: center;
+        border-bottom: 1px solid var(--primary-color);
+        width: 100%;
+    }
+    .caixa .espaco {
+        flex-direction: column;
+    }
+    .oferecido {
+        width: 100%;
+        margin: 0;
+    }
+    .ofere-pre {
+        height: 100%;
+        width: 100%;
+        margin: 0 0 1.5em 0;
+        padding: 0em 0;
+        position: relative;
+        overflow-y: hidden;
+    }
+    .ofere-pre h2 {
+        display: none;
+        margin: 0;
+        padding: 0
+    }
+    .ofere-pre p {
+        margin-left: 1.2em;
+        top: 0;
+    }
+    .oferecido-pre:first-child {
+        margin-top: 0;
+    }
+    .foto-oferecido {
+        width: 100%;
+        margin-top: 1em;
+    }
+    .img-1 {
+        flex-direction: row;
+        width: 100%;
+    }
+    .final .espaco {
+        flex-direction: column;
+    }
+    .servico-alinhar {
+        flex-wrap: wrap;
+    }
+    .servico i {
+        font-size: 3.8em;
+    }
+    .servico {
+        width: 40%;
+        height: 42%;
+        margin: 0.3em 1em;
+    }
+    .servico h1 {
+        font-size: 1.4em;
+    }
+    .servico a {
+        padding: 0.4em;
+    }
+    .caixa-3 .espaco {
+        overflow-y: hidden;
+    }
+    .oferecido p {
+        font-size: 0.8em;
+    }
+    .contato {
+        flex-wrap: wrap;
+    }
+    .rede-sociais i {
+        padding: 0.7em;
+    }
 }
